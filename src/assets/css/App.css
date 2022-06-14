@@ -1,0 +1,382 @@
+:root {
+  --blue: #44aadd;
+  --green:#2ec4b6;
+  --white: #ffffff;
+ --gray-dark: #888;
+ --gray: #999999;
+ --gray-light: #cccccc;
+ --gray-lighter: #ececec;
+ --gray-lightest: lighten(@gray-lighter, 4%);
+}
+ 
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PingFang SC', "Helvetica Neue", Helvetica, "microsoft yahei", arial, STHeiTi, sans-serif;
+} 
+
+body{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.form-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    width:100% !important;
+    max-width: 100%;
+    background:#219ebc/*#02c39a/*#52b788*/
+}
+
+.form-box{
+    width:380px;
+    height:400px;
+    background-color:white;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    /* border-radius:3%; */
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.header-form{
+  margin-bottom:45px;
+  justify-content: center;
+}
+
+button{
+  margin-top:40px;
+  margin-bottom:10px;
+}
+
+.message{
+  display:flex;
+  justify-content:space-between
+}
+
+.input-group-prepend
+{
+  display: flex;
+  margin-right: -1
+}
+
+.login-btn {
+  padding: 16px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  background-color: #d2cdca;
+  border: none;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  border-radius: 4px;
+  color: #3c3c3c;
+  font-weight: 600;
+  font-size: 1.4rem !important;
+}
+
+.form-control
+{
+  height: 40px  !important;
+  font-size: 1.4rem !important;
+}
+.input-group-text{
+  padding: 0.375rem 1.3rem !important;
+}
+
+/* screen 3  */
+.cards-container {
+    padding: 1rem;
+}
+
+.cardlist {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: left; 
+  align-items: center;
+  margin-top: 6rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width:481px)  {
+  .cardlist {
+    margin-left: 18% !important;}
+  }
+
+@media (min-width:641px)  {  
+
+  .cardlist {
+    margin-left: 12% !important;}
+  }
+
+@media (min-width:961px) {
+  .cardlist {
+    margin-left: 8% !important;}
+}
+
+.cardlist:after {
+  content: '';
+  margin: 0.7em 1em;
+} 
+
+.card {
+  background: linear-gradient(150deg, #bee3db, #faf9f9 100%) !important;
+  /* border-image: linear-gradient(45deg, rgb(0,143,104), #44aadd) 3 !important;
+  border-style: solid;
+  border-width: 2px !important; */
+  /* border: 2px solide linear-gradient(to right, red, purple); */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    width: 200px;
+    height: 140px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    cursor: pointer;
+    /* background: white !important; */
+    transition: 0.4s;
+    display: inline-block;   
+    margin: 1em;  
+    /* border: none !important; */
+    border-radius: 0.75rem !important;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Selectable */
+.card .selectable {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 3px solid transparent;
+  height: 100%;
+}
+.card .selectable .check {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+}
+.card .selectable .check:before {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  content: "";
+  border: 20px solid;
+  border-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.card .selectable .check .checkmark {
+  display: inline-block;
+  font: 20px sans-serif;
+  line-height: 20px;
+  text-align: center;
+  color: transparent;
+}
+.card .selectable.selected {
+  border-radius: 0.75rem !important;
+  border-color: #028090;
+}
+.card .selectable.selected .check:before {
+  border-color: #028090 #028090 rgba(0, 0, 255, 0) rgba(255, 0, 0, 0);
+}
+.card .selectable.selected .check .checkmark {
+  color: #fff;
+}
+
+.content {
+  padding: 24px;
+}
+.content .title, .content .description {
+  margin: 0;
+  padding: 4px;
+}
+.content .description {
+  font-weight: 600;
+  color: var(--gray-dark) ;
+  font-size: 1.3rem;
+}
+
+.content .title {
+  font-weight: 600;
+  font-size: 1.8rem !important;
+}
+
+.cards-container > .title {
+  text-align: center;
+  font-size: 30px;
+}
+
+button.card {
+  display: block;
+  cursor: pointer;
+  width: 180px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 16px;
+  border-color: transparent;
+  border-radius: 10px;
+  background: #44aadd !important;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+}
+button.card:focus {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.header {
+  width: 100%;
+  display : flex;
+  justify-content: space-between;
+  height: 75px;
+  /* position: sticky; */
+  top: 0;
+  z-index: 999;
+}
+
+.header-container {
+  width: 150px;
+  /* background-color: white; */
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
+}
+
+.logo {
+    justify-self: start;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    max-width:100%;
+    max-height:100%;
+}
+
+.logout-btn {
+  margin: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  /* font-weight: 600; */
+  /* background-color: #44aadd;#2ec4b6; */
+  font-size: 1.4rem !important;
+}
+
+.listCards-container {
+  width: 100%;
+  height: auto ;
+  /* background: #f6fff8; */
+   background: #ededed/*f0efeb/*#f1f7ed; /*#eef0f2; */
+}
+
+.circle  {
+  margin-left: 27%;
+  width: 50%;
+}
+
+.div-row {
+  width: 100%;
+ 
+}
+
+label {
+  right: 5% !important;
+  position: absolute !important; 
+}
+
+.label-container {
+  position: relative;
+  padding-right: 40px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.label-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.label-container > span {
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;
+}
+
+.select-checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.label-container:hover input ~ .select-checkmark {
+  background-color: #aaa;
+}
+
+/* When the checkbox is checked, add a blue background */
+.label-container input:checked ~ .select-checkmark {
+  background-color: #028090 !important;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.select-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.label-container input:checked ~ .select-checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.label-container .select-checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.next-btn {
+  float: right;
+  margin-right: 4rem;
+  width: 150px;
+  padding: 1.5rem !important;
+  background: var(--blue) !important; 
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+}
+
+.footer {
+  height: 6rem;
+  margin-bottom: 6%;
+}
+
+.fa {
+  margin-left: 1rem !important;
+}

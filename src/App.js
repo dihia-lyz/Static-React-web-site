@@ -1,24 +1,25 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import './App.css';
-import Home from './components/pages/Home';
+// import Navbar from './components/Navbar';
+import './assets/css/App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import LoginPage from './screens/Login';
+import SitesPage from './screens/SitesPage';
+import HomePage from './screens/HomePage';
+import RatingPage from './screens/RatingPage';
+import ListZonesPage from './screens/ListZonesPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
-import Presentation from './components/pages/Presentation/Presentation';
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/' component= {Presentation} />
-          <Route path='/services' component={Services} />
-          <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
+          <Route path='/' exact component={LoginPage} />
+          <Route path='/SitesPage' component= {SitesPage} />
+          <Route path='/HomePage' component={HomePage} />
+          <Route path='/RatingPage' component={RatingPage} />
+          <Route path='/ListZonesPage' component={ListZonesPage} />
         </Switch>
       </Router>
     </>
